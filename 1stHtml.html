@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThisComp</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(to right, darkred 50%, black 50%);
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        color: white;
+      }
+      .icon {
+        background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fprogrammer-icon&psig=AOvVaw0HPkuSlvvosI17vVSIzrDK&ust=1717090734722000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIC1y9uzs4YDFQAAAAAdAAAAABAE");
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input {
+        margin: 5px 0;
+        padding: 5px;
+      }
+      button {
+        margin: 5px 0;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="icon"></div>
+        <h1>ThisComp</h1>
+        <div>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Sign In</button>
+          <button onclick="toggleForm()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleForm() {
+        const form = document.querySelector(".form");
+        form.classList.toggle("transition");
+      }
+    </script>
+  </body>
+</html>
